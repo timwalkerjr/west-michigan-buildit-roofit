@@ -1,0 +1,61 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+---
+
+<BaseLayout title={`About Us | ${SITE.name}`} description="Locally owned West Michigan roofing and custom building experts serving Grand Haven and the lakeshore.">
+  <section class="py-24 bg-slate-950 text-white" data-ps="src/pages/about.astro:518k95">
+    <Container>
+      <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block" data-ps="src/pages/about.astro:6ovv6e">Our Story</span>
+      <h1 class="text-h1 font-bold mb-6" data-ps="src/pages/about.astro:h98bkn">West Michigan Built. <br/> Lakeshore Proven.</h1>
+      <p class="text-xl text-dark-muted-foreground max-w-2xl" data-ps="src/pages/about.astro:uw7ib">
+        We are a locally owned and operated dual-division construction firm dedicated to protecting and enhancing homes along the Michigan shoreline.
+      </p>
+    </Container>
+  </section>
+
+  <section class="py-24 bg-background" data-ps="src/pages/about.astro:518k96">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24" data-ps="src/pages/about.astro:4st1ib">
+         <div class="reveal-left" data-ps="src/pages/about.astro:4st1ic">
+            <h2 class="text-h2 font-bold mb-8" data-ps="src/pages/about.astro:2kted2">The Professional Difference</h2>
+            <div class="space-y-6 text-lg text-muted-foreground" data-ps="src/pages/about.astro:txwtwk">
+               <p data-ps="src/pages/about.astro:uw7ia">
+                 West Michigan BUILDIT | ROOFIT was founded on a simple principle: West Michigan homeowners deserve contractors who understand the unique structural demands of coastal living.
+               </p>
+               <p data-ps="src/pages/about.astro:uw7i9">
+                 Our dual-division structure allows us to provide hyper-specialized expertise. Whether we are framing a custom lakefront addition through our <strong>BUILDIT</strong> division or installing a high-wind shingle system through <strong>ROOFIT</strong>, you are getting a team of experts focused on their specific craft.
+               </p>
+               <p data-ps="src/pages/about.astro:uw7i8">
+                 We pride ourselves on being the go-to roofing contractor for all commercial and residential exterior home needs. We deliver top-notch service and results on every project we tackle.
+               </p>
+            </div>
+         </div>
+         <div class="reveal-right" data-ps="src/pages/about.astro:txwtwl">
+            <div class="aspect-[4/5] bg-slate-900 border border-border p-1" data-ps="src/pages/about.astro:txwtwm">
+               <img src="https://images.pexels.com/photos/33405084/pexels-photo-33405084.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Construction site" class="w-full h-full object-cover" data-ps="src/pages/about.astro:2ajx6s" />
+            </div>
+         </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/about.astro:txwtwn">
+         <div class="bg-surface border border-border p-8 reveal" data-ps="src/pages/about.astro:txwtwo">
+            <div class="text-primary text-4xl font-bold mb-4" data-ps="src/pages/about.astro:txwtwp">15+</div>
+            <h3 class="text-lg font-bold uppercase tracking-wider mb-2" data-ps="src/pages/about.astro:c3liul">Years Experience</h3>
+            <p class="text-muted-foreground text-sm" data-ps="src/pages/about.astro:uw7i7">Deep technical knowledge of West Michigan building codes and coastal conditions.</p>
+         </div>
+         <div class="bg-surface border border-border p-8 reveal reveal-delay-1" data-ps="src/pages/about.astro:txwtwq">
+            <div class="text-primary text-4xl font-bold mb-4" data-ps="src/pages/about.astro:txwtwr">100%</div>
+            <h3 class="text-lg font-bold uppercase tracking-wider mb-2" data-ps="src/pages/about.astro:c3liuk">Locally Owned</h3>
+            <p class="text-muted-foreground text-sm" data-ps="src/pages/about.astro:uw7i6">Based in Grand Haven. We aren't a storm-chasing franchise; we are your neighbors.</p>
+         </div>
+         <div class="bg-surface border border-border p-8 reveal reveal-delay-2" data-ps="src/pages/about.astro:txwtws">
+            <div class="text-primary text-4xl font-bold mb-4" data-ps="src/pages/about.astro:txwtwt">Certified</div>
+            <h3 class="text-lg font-bold uppercase tracking-wider mb-2" data-ps="src/pages/about.astro:c3liuj">Licensed Pro</h3>
+            <p class="text-muted-foreground text-sm" data-ps="src/pages/about.astro:uw7i5">Fully licensed and insured structural builders and certified roofing installers.</p>
+         </div>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

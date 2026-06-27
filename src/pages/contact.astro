@@ -1,0 +1,172 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+---
+
+<BaseLayout title={`Contact Us | ${SITE.name}`} description="Request a free estimate for roofing, remodeling, or new construction in West Michigan.">
+  <section class="relative py-24 bg-slate-950 text-white overflow-hidden" data-ps="src/pages/contact.astro:76y6n1">
+    <div class="absolute inset-0 z-0 opacity-20" data-ps="src/pages/contact.astro:uoopdj">
+       <img src="https://images.pexels.com/photos/37623627/pexels-photo-37623627.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Construction background" class="w-full h-full object-cover" data-ps="src/pages/contact.astro:s6fl20" />
+       <div class="absolute inset-0 bg-slate-950/80" data-ps="src/pages/contact.astro:uoopdk"></div>
+    </div>
+    
+    <Container class="relative z-10 text-center">
+      <h1 class="text-h1 font-bold mb-6 hero-animate" data-ps="src/pages/contact.astro:xwwezv">Request An Estimate</h1>
+      <p class="text-xl text-dark-muted-foreground max-w-2xl mx-auto hero-animate hero-animate-delay-1" data-ps="src/pages/contact.astro:wmga28">
+        Whether you have a small repair or a large-scale project, our team is here to provide reliable, trustworthy, and affordable services.
+      </p>
+    </Container>
+  </section>
+
+  <section class="py-24 bg-background" data-ps="src/pages/contact.astro:76y6n2">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16" data-ps="src/pages/contact.astro:uoope6">
+        <!-- Contact Sidebar -->
+        <div class="lg:col-span-1 reveal-left" data-ps="src/pages/contact.astro:uoope7">
+          <h2 class="text-2xl font-bold mb-8 uppercase tracking-wider border-b-2 border-primary pb-4 inline-block" data-ps="src/pages/contact.astro:j8hhsa">Contact Info</h2>
+          
+          <div class="space-y-10" data-ps="src/pages/contact.astro:uoope8">
+            <div data-ps="src/pages/contact.astro:uoope9">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-3" data-ps="src/pages/contact.astro:4k2kk1">Office Hours</h3>
+              <p class="text-lg font-medium" data-ps="src/pages/contact.astro:wmga27">{SITE.contact.hours}</p>
+              <p class="text-muted-foreground" data-ps="src/pages/contact.astro:wmga26">Saturday - Sunday: Closed</p>
+            </div>
+
+            <div data-ps="src/pages/contact.astro:uoopea">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-3" data-ps="src/pages/contact.astro:4k2kkn">BUILDIT Division</h3>
+              <a href={`tel:${SITE.contact.buildit}`} class="text-2xl font-bold hover:text-primary transition-colors" data-ps="src/pages/contact.astro:piidcg">{SITE.contact.buildit}</a>
+              <p class="text-muted-foreground mt-1" data-ps="src/pages/contact.astro:wmga25">Custom Homes & Remodeling</p>
+            </div>
+
+            <div data-ps="src/pages/contact.astro:uoopeb">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-3" data-ps="src/pages/contact.astro:4k2kko">ROOFIT Division</h3>
+              <a href={`tel:${SITE.contact.roofit}`} class="text-2xl font-bold hover:text-primary transition-colors" data-ps="src/pages/contact.astro:piidcf">{SITE.contact.roofit}</a>
+              <p class="text-muted-foreground mt-1" data-ps="src/pages/contact.astro:wmga24">Roofing & Exteriors</p>
+            </div>
+
+            <div data-ps="src/pages/contact.astro:uoopec">
+               <h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-3" data-ps="src/pages/contact.astro:4k2kkp">Main Office</h3>
+               <p class="text-lg font-medium" data-ps="src/pages/contact.astro:wmga23">{SITE.contact.office}</p>
+               <p class="text-muted-foreground" data-ps="src/pages/contact.astro:wmga22">{SITE.contact.address}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="lg:col-span-2 reveal-right" data-ps="src/pages/contact.astro:uooped">
+          <div class="bg-surface border border-border p-8 md:p-12" data-ps="src/pages/contact.astro:uoopee">
+            <div id="contact-status" class="hidden mb-8 px-6 py-4 rounded-sm border" data-ps="src/pages/contact.astro:uoopef"></div>
+            
+            <form id="contact-form" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-ps="src/pages/contact.astro:lx8n1r">
+                <div data-ps="src/pages/contact.astro:lx8n1q">
+                  <label for="name" class="block text-xs font-bold uppercase tracking-widest mb-2" data-ps="src/pages/contact.astro:zcrc06">First and Last Name *</label>
+                  <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-background border border-border focus:border-primary outline-none transition-colors" />
+                </div>
+                <div data-ps="src/pages/contact.astro:lx8n1p">
+                  <label for="email" class="block text-xs font-bold uppercase tracking-widest mb-2" data-ps="src/pages/contact.astro:zcrc05">Email *</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-background border border-border focus:border-primary outline-none transition-colors" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-ps="src/pages/contact.astro:lx8n1o">
+                <div data-ps="src/pages/contact.astro:lx8n1n">
+                  <label for="phone" class="block text-xs font-bold uppercase tracking-widest mb-2" data-ps="src/pages/contact.astro:zcrc04">Contact Phone *</label>
+                  <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-background border border-border focus:border-primary outline-none transition-colors" />
+                </div>
+                <div data-ps="src/pages/contact.astro:lx8n1m">
+                  <label for="city" class="block text-xs font-bold uppercase tracking-widest mb-2" data-ps="src/pages/contact.astro:zcrc03">City *</label>
+                  <input type="text" id="city" name="city" required class="w-full px-4 py-3 bg-background border border-border focus:border-primary outline-none transition-colors" />
+                </div>
+              </div>
+
+              <div data-ps="src/pages/contact.astro:lx8n1l">
+                <label for="service_for" class="block text-xs font-bold uppercase tracking-widest mb-2" data-ps="src/pages/contact.astro:zcrc02">Service For: *</label>
+                <select id="service_for" name="service_for" required class="w-full px-4 py-3 bg-background border border-border focus:border-primary outline-none transition-colors">
+                   <option value="Residential">Residential</option>
+                   <option value="Commercial">Commercial</option>
+                   <option value="Industrial">Industrial</option>
+                </select>
+              </div>
+
+              <div data-ps="src/pages/contact.astro:lx8n1k">
+                <label for="service_type" class="block text-xs font-bold uppercase tracking-widest mb-2" data-ps="src/pages/contact.astro:zcrc01">Service Type:</label>
+                <select id="service_type" name="service_type" class="w-full px-4 py-3 bg-background border border-border focus:border-primary outline-none transition-colors">
+                   <option value="New Roof">New Roof</option>
+                   <option value="Re-Roofing">Re-Roofing</option>
+                   <option value="Repair Roofing">Repair Roofing</option>
+                   <option value="Custom Building">Custom Building</option>
+                   <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div data-ps="src/pages/contact.astro:lx8n1j">
+                <label for="message" class="block text-xs font-bold uppercase tracking-widest mb-2" data-ps="src/pages/contact.astro:zcrc00">How Can We Help You? *</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Please provide a few details about your project." class="w-full px-4 py-3 bg-background border border-border focus:border-primary outline-none transition-colors"></textarea>
+              </div>
+
+              <div class="py-4" data-ps="src/pages/contact.astro:lx8n1i">
+                 <altcha-widget challenge="/psapi-internal-v1/altcha/challenge" display="invisible" auto="onfocus"></altcha-widget>
+              </div>
+
+              <button type="submit" id="contact-submit" class="w-full bg-primary hover:bg-primary-hover text-white py-5 rounded-sm font-bold uppercase tracking-wider transition-all hover-lift">
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <script>
+    import 'altcha';
+
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const status = document.getElementById('contact-status') as HTMLDivElement;
+    const submitBtn = document.getElementById('contact-submit') as HTMLButtonElement;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch('/psapi-internal-v1/forms/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            city: formData.get('city'),
+            service_for: formData.get('service_for'),
+            service_type: formData.get('service_type'),
+            message: formData.get('message'),
+            altcha: formData.get('altcha'),
+            subject: `Estimate Request from ${formData.get('name')}`
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          status.className = 'mb-8 px-6 py-4 rounded-sm bg-green-50 border-green-200 text-green-700 block';
+          status.textContent = 'Thank you! Your estimate request has been sent. We will reach out shortly.';
+          form.reset();
+        } else {
+          throw new Error(result.error || 'Failed to send');
+        }
+      } catch (err) {
+        status.className = 'mb-8 px-6 py-4 rounded-sm bg-red-50 border-red-200 text-red-700 block';
+        status.textContent = err instanceof Error ? err.message : 'Failed to send. Please try again or call our office.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Request';
+      }
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+// Footer - structural dark footer with double division contact info
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-foreground text-secondary py-16 border-t border-secondary/10" data-ps="src/components/Footer.astro:ikmf33">
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12" data-ps="src/components/Footer.astro:p4vf88">
+      <!-- Brand & Description -->
+      <div class="lg:col-span-2" data-ps="src/components/Footer.astro:p4vf89">
+        <img src={SITE.logo} alt={SITE.name} class="h-12 w-auto mb-6 brightness-0 invert" data-ps="src/components/Footer.astro:footer-logo" />
+        <p class="text-secondary/70 text-base max-w-md" data-ps="src/components/Footer.astro:euol">
+          Lakeshore Certified Roofing & Exterior Custom Building for West Michigan. We specialize in construction built to withstand coastal environments.
+        </p>
+        <div class="mt-8 flex flex-col gap-3" data-ps="src/components/Footer.astro:p4vf87">
+          <div class="flex items-center gap-3" data-ps="src/components/Footer.astro:p4vf88">
+            <span class="text-primary font-bold" data-ps="src/components/Footer.astro:hzwfpg">BUILDIT:</span>
+            <a href={`tel:${SITE.contact.buildit}`} class="hover:text-primary-hover transition-colors font-semibold" data-ps="src/components/Footer.astro:7gqbzq">{SITE.contact.buildit}</a>
+          </div>
+          <div class="flex items-center gap-3" data-ps="src/components/Footer.astro:p4vf89">
+            <span class="text-primary font-bold" data-ps="src/components/Footer.astro:hzwfpf">ROOFIT:</span>
+            <a href={`tel:${SITE.contact.roofit}`} class="hover:text-primary-hover transition-colors font-semibold" data-ps="src/components/Footer.astro:7gqbzr">{SITE.contact.roofit}</a>
+          </div>
+          <div class="flex items-center gap-3" data-ps="src/components/Footer.astro:p4vf8a">
+            <span class="text-secondary/60" data-ps="src/components/Footer.astro:hzwfpe">Office:</span>
+            <a href={`tel:${SITE.contact.office}`} class="hover:text-primary-hover transition-colors font-semibold" data-ps="src/components/Footer.astro:7gqc0d">{SITE.contact.office}</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div data-ps="src/components/Footer.astro:p4vf8a">
+        <h2 class="text-lg font-display font-bold mb-6 text-white" data-ps="src/components/Footer.astro:f0091e">Navigation</h2>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li data-ps="src/components/Footer.astro:wyji5s"><a href="/" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0e">Home</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6e"><a href="/about" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0f">About</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6f"><a href="/services" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0g">Services</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6g"><a href="/service-areas" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0h">Service Areas</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6h"><a href="/reviews" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0i">Reviews</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div data-ps="src/components/Footer.astro:p4vf8c">
+        <h2 class="text-lg font-display font-bold mb-6 text-white" data-ps="src/components/Footer.astro:f0091f">Resources</h2>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li data-ps="src/components/Footer.astro:wyji6i"><a href="/blog" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0j">Latest Articles</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6j"><a href="/faqs" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0k">Homeowner FAQs</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6k"><a href="/contact" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0l">Free Estimate</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6l"><a href="/service-areas" class="text-secondary/70 hover:text-white transition-colors font-medium" data-ps="src/components/Footer.astro:7gqc0m">Coverage Map</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-secondary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary/50" data-ps="src/components/Footer.astro:p4vf8b">
+      <p data-ps="src/components/Footer.astro:euom">© {currentYear} {SITE.name}. All rights reserved. Locally owned in West Michigan.</p>
+      <div class="flex gap-6" data-ps="src/components/Footer.astro:p4vf8b">
+        <a href="/privacy" class="hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2pe">Privacy Policy</a>
+        <a href="/terms" class="hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2pf">Terms of Service</a>
+      </div>
+    </div>
+  </Container>
+</footer>

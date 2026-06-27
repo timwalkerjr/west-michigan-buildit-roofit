@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const faqs = [
+  {
+    q: "Do you provide commercial roofing services?",
+    a: "Yes, we provide reliable flat roof installation, repair, and maintenance for businesses of all sizes throughout the Grand Haven area. Our commercial teams are certified for various industrial roofing systems including EPDM and TPO."
+  },
+  {
+    q: "Do you offer a lifetime guarantee on your products?",
+    a: "We offer premium lifetime shingle and metal roofing systems. Most of our exterior upgrades come with robust manufacturer warranties backed by our own craftsmanship guarantee. Contact us for specific warranty details on your chosen materials."
+  },
+  {
+    q: "How long does a typical roof replacement take?",
+    a: "Most residential roof replacements in West Michigan are completed within 1 to 3 days, depending on the size and complexity of the structure. We prioritize neat cleanup and minimal disruption to your daily routine."
+  },
+  {
+    q: "Do you handle permits for home remodeling?",
+    a: "Yes, the BUILDIT division manages all necessary building permits and structural inspections required by your local West Michigan municipality (Grand Haven, Spring Lake, Holland, etc.) to ensure your project is code-compliant."
+  },
+  {
+    q: "What areas of West Michigan do you serve?",
+    a: "We primarily serve Ottawa, Muskegon, and Allegan counties, with a heavy focus on lakeshore communities including Grand Haven, Holland, Muskegon, Spring Lake, and Fruitport."
+  },
+  {
+    q: "Are you licensed and insured?",
+    a: "Absolutely. We carry full structural builder licensing and comprehensive general liability and workers' compensation insurance to protect both our team and our clients."
+  }
+];
+---
+
+<BaseLayout title={`Frequently Asked Questions | ${SITE.name}`} description="Answers to common questions about West Michigan roofing, remodeling, and building projects.">
+  <section class="py-24 bg-slate-950 text-white" data-ps="src/pages/faqs.astro:dhagou">
+    <Container>
+      <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block" data-ps="src/pages/faqs.astro:kgya5x">Knowledge Center</span>
+      <h1 class="text-h1 font-bold mb-6" data-ps="src/pages/faqs.astro:cuvvg1">Homeowner FAQ</h1>
+      <p class="text-xl text-dark-muted-foreground max-w-2xl" data-ps="src/pages/faqs.astro:xbezbw">
+        Common questions about West Michigan roofing warranties, project timelines, and structural remodeling.
+      </p>
+    </Container>
+  </section>
+
+  <section class="py-24 bg-background" data-ps="src/pages/faqs.astro:dhagot">
+    <Container>
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/faqs.astro:ap7rys">
+        <div class="space-y-6" data-ps="src/pages/faqs.astro:ap7ryr">
+          {faqs.map((faq, i) => (
+            <div class="bg-surface border border-border reveal" data-ps={`src/pages/faqs.astro:ap7ryq-${i}`}>
+               <h3 class="text-xl font-bold p-8 pb-4" data-ps={`src/pages/faqs.astro:e31ymw-${i}`}>{faq.q}</h3>
+               <div class="p-8 pt-0 text-muted-foreground leading-relaxed" data-ps={`src/pages/faqs.astro:ap7ryp-${i}`}>
+                  {faq.a}
+               </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-20 text-center" data-ps="src/pages/faqs.astro:ap7ryo">
+           <h2 class="text-2xl font-bold mb-6" data-ps="src/pages/faqs.astro:cdu8b4">Have a different question?</h2>
+           <p class="text-muted-foreground mb-8" data-ps="src/pages/faqs.astro:xbezbx">Our team is available by appointment to discuss your specific project needs.</p>
+           <div class="flex flex-wrap justify-center gap-4" data-ps="src/pages/faqs.astro:ap7ryn">
+              <a href="/contact" class="px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest rounded-sm transition-all hover-lift" data-ps="src/pages/faqs.astro:ulr5xh">Send Us a Message</a>
+              <a href={`tel:${SITE.contact.office}`} class="px-8 py-4 border border-border font-bold uppercase tracking-widest rounded-sm hover:bg-slate-950 hover:text-white transition-all" data-ps="src/pages/faqs.astro:ulr5xg">Call Office: {SITE.contact.office}</a>
+           </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

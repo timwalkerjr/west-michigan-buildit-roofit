@@ -1,0 +1,67 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const areas = [
+  "Grand Haven", "Spring Lake", "Holland", "Muskegon", "North Muskegon", 
+  "Norton Shores", "Fruitport", "Ferrysburg", "West Olive", "Zeeland", 
+  "Nunica", "Coopersville", "Grandville", "Walker", "Allendale"
+];
+---
+
+<BaseLayout title={`Service Areas | ${SITE.name}`} description="Providing roofing and construction services across Ottawa, Muskegon, and Allegan counties.">
+  <section class="py-24 bg-slate-950 text-white" data-ps="src/pages/service-areas.astro:wlmshi">
+    <Container>
+      <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block" data-ps="src/pages/service-areas.astro:mxt7b">Regional Presence</span>
+      <h1 class="text-h1 font-bold mb-6" data-ps="src/pages/service-areas.astro:ozoz2x">Our West Michigan <br/> Coverage Map</h1>
+      <p class="text-xl text-dark-muted-foreground max-w-2xl" data-ps="src/pages/service-areas.astro:6jhf0f">
+        We are centrally located in Grand Haven, allowing us to provide prompt emergency repair and project management across the lakeshore.
+      </p>
+    </Container>
+  </section>
+
+  <section class="py-24 bg-background" data-ps="src/pages/service-areas.astro:wlmshh">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start" data-ps="src/pages/service-areas.astro:k1h7q4">
+         <div class="reveal-left" data-ps="src/pages/service-areas.astro:k1h7q3">
+            <h2 class="text-h2 font-bold mb-8 uppercase tracking-wider" data-ps="src/pages/service-areas.astro:aba1vc">County Coverage</h2>
+            <div class="space-y-12" data-ps="src/pages/service-areas.astro:ee75a5">
+               <div data-ps="src/pages/service-areas.astro:ee75a4">
+                  <h3 class="text-2xl font-bold text-primary mb-4" data-ps="src/pages/service-areas.astro:4d4vcc">Ottawa County</h3>
+                  <p class="text-muted-foreground mb-6" data-ps="src/pages/service-areas.astro:6jhf0g">Our primary service hub. We provide full construction and roofing services to all Ottawa County municipalities with locally based crews.</p>
+               </div>
+               <div data-ps="src/pages/service-areas.astro:ee75a3">
+                  <h3 class="text-2xl font-bold text-primary mb-4" data-ps="src/pages/service-areas.astro:4d4vcb">Muskegon County</h3>
+                  <p class="text-muted-foreground mb-6" data-ps="src/pages/service-areas.astro:6jhf0h">Dedicated ROOFIT dispatch for Norton Shores, Fruitport, and the North Muskegon shoreline. We specialize in coastal roofing systems for this area.</p>
+               </div>
+               <div data-ps="src/pages/service-areas.astro:ee75a2">
+                  <h3 class="text-2xl font-bold text-primary mb-4" data-ps="src/pages/service-areas.astro:4d4vca">Allegan County</h3>
+                  <p class="text-muted-foreground mb-6" data-ps="src/pages/service-areas.astro:6jhf0i">Serving the northern Allegan lakeshore with specialized roofing and exterior remodeling services.</p>
+               </div>
+            </div>
+         </div>
+         
+         <div class="reveal-right" data-ps="src/pages/service-areas.astro:ee75a1">
+            <div class="bg-surface border border-border p-8 md:p-12" data-ps="src/pages/service-areas.astro:ee75a0">
+               <h3 class="text-xl font-bold mb-8 uppercase tracking-widest border-b border-border pb-4" data-ps="src/pages/service-areas.astro:4d4vc9">Major Cities Served</h3>
+               <div class="grid grid-cols-2 sm:grid-cols-3 gap-6" data-ps="src/pages/service-areas.astro:ee759z">
+                  {areas.map(area => (
+                     <div class="flex items-center gap-3" data-ps="src/pages/service-areas.astro:ee759y">
+                        <div class="w-1.5 h-1.5 bg-primary" data-ps="src/pages/service-areas.astro:ee759x"></div>
+                        <span class="font-medium" data-ps="src/pages/service-areas.astro:mxt7c">{area}</span>
+                     </div>
+                  ))}
+               </div>
+               
+               <div class="mt-12 p-6 bg-slate-950 text-white" data-ps="src/pages/service-areas.astro:ee759w">
+                  <h4 class="font-bold mb-2" data-ps="src/pages/service-areas.astro:j1jski">Outside these areas?</h4>
+                  <p class="text-sm text-dark-muted-foreground mb-4" data-ps="src/pages/service-areas.astro:6jhf0j">We occasionally take on specialized projects further inland. Reach out to discuss your specific needs.</p>
+                  <a href="/contact" class="text-primary font-bold text-sm uppercase tracking-widest hover:text-white transition-colors" data-ps="src/pages/service-areas.astro:dnfbq6">Inquire Today →</a>
+               </div>
+            </div>
+         </div>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

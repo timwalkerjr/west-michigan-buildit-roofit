@@ -1,0 +1,56 @@
+---
+import { SITE } from '@/config/site';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/home/Hero.astro';
+import Divisions from '@/components/home/Divisions.astro';
+import ServicesGrid from '@/components/home/ServicesGrid.astro';
+import ServiceAreas from '@/components/home/ServiceAreas.astro';
+import Reviews from '@/components/home/Reviews.astro';
+import FAQ from '@/components/home/FAQ.astro';
+import BlogPreview from '@/components/home/BlogPreview.astro';
+---
+
+<BaseLayout
+  title={SITE.title}
+  description={SITE.description}
+  type="website"
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'ConstructionBusiness',
+    name: SITE.name,
+    url: SITE.url,
+    image: SITE.logo,
+    telephone: SITE.contact.office,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Grand Haven',
+      addressRegion: 'MI',
+      addressCountry: 'US'
+    },
+    sameAs: Object.values(SITE.socials),
+  }}
+>
+  <Hero />
+  <Divisions />
+  <ServicesGrid />
+  <ServiceAreas />
+  <Reviews />
+  <FAQ />
+  <BlogPreview />
+  
+  <!-- Final CTA -->
+  <section class="py-24 bg-primary text-white text-center" data-ps="src/pages/index.astro:g2l9by">
+    <div class="max-w-4xl mx-auto px-4" data-ps="src/pages/index.astro:2b7xnr">
+      <h2 class="text-h2 font-bold mb-6 reveal" data-ps="src/pages/index.astro:frgy7n">Ready to Protect Your Investment?</h2>
+      <p class="text-xl mb-10 opacity-90 reveal reveal-delay-1" data-ps="src/pages/index.astro:tff0km">Get a no-obligation structural project estimate from West Michigan's trusted roofing and building experts.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 reveal reveal-delay-2" data-ps="src/pages/index.astro:2b7xns">
+        <a href="/contact" class="px-10 py-5 bg-slate-950 text-white font-bold uppercase tracking-wider rounded-sm hover:bg-slate-900 transition-all hover-lift" data-ps="src/pages/index.astro:tno8le">
+          Request Free Estimate
+        </a>
+        <a href={`tel:${SITE.contact.office}`} class="px-10 py-5 bg-white text-primary font-bold uppercase tracking-wider rounded-sm hover:bg-white/90 transition-all" data-ps="src/pages/index.astro:tno8lf">
+          Call Office: {SITE.contact.office}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

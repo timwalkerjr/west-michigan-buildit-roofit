@@ -1,0 +1,83 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const services = [
+  {
+    title: "Asphalt Roofing",
+    description: "Top-quality asphalt shingle installation, repair, and replacement, backed by expert craftsmanship and exceptional customer service.",
+    image: "https://images.pexels.com/photos/4334097/pexels-photo-4334097.jpeg?auto=compress&cs=tinysrgb&w=800",
+    division: "ROOFIT"
+  },
+  {
+    title: "Commercial Roofing",
+    description: "Reliable flat roof installation, repair, and maintenance for businesses of all sizes throughout the Grand Haven area.",
+    image: "https://images.pexels.com/photos/8312917/pexels-photo-8312917.jpeg?auto=compress&cs=tinysrgb&w=800",
+    division: "ROOFIT"
+  },
+  {
+    title: "Metal Roofing",
+    description: "Energy-efficient metal roofing installation and repair for homes and businesses, built by an experienced team to last for decades.",
+    image: "https://images.pexels.com/photos/37623627/pexels-photo-37623627.jpeg?auto=compress&cs=tinysrgb&w=800",
+    division: "ROOFIT"
+  },
+  {
+    title: "Home Remodeling",
+    description: "Comprehensive home remodeling focused on exterior upgrades that enhance your property's appearance, durability, and value.",
+    image: "https://images.pexels.com/photos/33405084/pexels-photo-33405084.jpeg?auto=compress&cs=tinysrgb&w=800",
+    division: "BUILDIT"
+  },
+  {
+    title: "Seamless Gutters",
+    description: "Professional gutter installation for homes and businesses across Grand Haven, with seamless options in many materials and colors.",
+    image: "https://images.pexels.com/photos/3258128/pexels-photo-3258128.jpeg?auto=compress&cs=tinysrgb&w=800",
+    division: "ROOFIT"
+  },
+  {
+    title: "Siding Installation",
+    description: "Expert vinyl siding installation for homes and businesses, enhancing curb appeal and protecting your investment.",
+    image: "https://images.pexels.com/photos/34382307/pexels-photo-34382307.jpeg?auto=compress&cs=tinysrgb&w=800",
+    division: "ROOFIT"
+  }
+];
+---
+
+<BaseLayout title={`Our Services | ${SITE.name}`} description="Expert roofing, siding, gutters, and home remodeling services in West Michigan.">
+  <section class="py-24 bg-slate-950 text-white" data-ps="src/pages/services.astro:3fuawy">
+    <Container>
+      <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block" data-ps="src/pages/services.astro:6ra1ij">Solutions</span>
+      <h1 class="text-h1 font-bold mb-6" data-ps="src/pages/services.astro:l71k6o">Structural & Exterior Expertise</h1>
+      <p class="text-xl text-dark-muted-foreground max-w-2xl" data-ps="src/pages/services.astro:gtmjuq">
+        From emergency roof repairs to custom ground-up construction, our dual divisions provide the specialized skills your project requires.
+      </p>
+    </Container>
+  </section>
+
+  <section class="py-24 bg-background" data-ps="src/pages/services.astro:3fuawz">
+    <Container>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12" data-ps="src/pages/services.astro:on4k2c">
+        {services.map((service, i) => (
+          <div class={`bg-surface border border-border flex flex-col md:flex-row overflow-hidden reveal reveal-delay-${i%3}`} data-ps={`src/pages/services.astro:on4k2b-${i}`}>
+            <div class="md:w-1/3 aspect-video md:aspect-auto" data-ps={`src/pages/services.astro:on4k2a-${i}`}>
+               <img src={service.image} alt={service.title} class="w-full h-full object-cover" loading="lazy" data-ps={`src/pages/services.astro:giqj9h-${i}`} />
+            </div>
+            <div class="p-8 md:w-2/3" data-ps={`src/pages/services.astro:on4k29-${i}`}>
+               <div class="flex items-center gap-2 mb-3" data-ps={`src/pages/services.astro:on4k28-${i}`}>
+                  <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 border ${service.division === 'BUILDIT' ? 'text-secondary border-secondary/20 bg-secondary/5' : 'text-primary border-primary/20 bg-primary/5'}`} data-ps={`src/pages/services.astro:6ra1ii-${i}`}>
+                    {service.division} Division
+                  </span>
+               </div>
+               <h3 class="text-2xl font-bold mb-4" data-ps={`src/pages/services.astro:k8y9wv-${i}`}>{service.title}</h3>
+               <p class="text-muted-foreground mb-6" data-ps={`src/pages/services.astro:gtmjup-${i}`}>{service.description}</p>
+               <a href="/contact" class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider hover:gap-3 transition-all" data-ps={`src/pages/services.astro:9pon50-${i}`}>
+                  Request Quote
+                  <span data-ps={`src/pages/services.astro:6ra1ih-${i}`}>→</span>
+               </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

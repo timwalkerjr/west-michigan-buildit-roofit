@@ -1,0 +1,82 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const reviews = [
+  {
+    name: "Roger Felde",
+    source: "Google",
+    location: "Grand Haven",
+    text: "The team was very professional and very fast. Did a great job cleaned up after themselves. Didn't have any problems at all I definitely would recommend using this company for all your roofing and building needs even when they ran into unexpected problems with our roof they knew exactly how to take care of it hats off to a great company."
+  },
+  {
+    name: "Jeff Rubleski",
+    source: "Google",
+    location: "Spring Lake",
+    text: "This team is absolutely awesome to work with. They recently performed extensive deck rebuilding for us, roof repair and a host of other essential repairs on our house in Grand Haven. The communication with them was easy and they made insightful, money-saving recommendations to us as we authorized a number of household projects."
+  },
+  {
+    name: "HVH",
+    source: "Google",
+    location: "Holland",
+    text: "Did a great job fast and efficient, cleaned up afterwards everything looked great"
+  },
+  {
+    name: "Michael S.",
+    source: "Direct",
+    location: "Muskegon",
+    text: "Professional from start to finish. They handled the insurance claim process for my storm damage with ease. The new roof looks incredible."
+  },
+  {
+    name: "Sarah Jenkins",
+    source: "Google",
+    location: "North Muskegon",
+    text: "Our home remodel turned out better than we could have imagined. The BUILDIT division really knows their stuff when it comes to structural additions."
+  }
+];
+---
+
+<BaseLayout title={`Customer Reviews | ${SITE.name}`} description="Read verified reviews from West Michigan homeowners about our roofing and construction services.">
+  <section class="py-24 bg-slate-950 text-white text-center" data-ps="src/pages/reviews.astro:ael1lc">
+    <Container>
+      <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block" data-ps="src/pages/reviews.astro:z5g4n8">Proven Trust</span>
+      <h1 class="text-h1 font-bold mb-6" data-ps="src/pages/reviews.astro:e6x8gv">Lakeshore Reputation</h1>
+      <p class="text-xl text-dark-muted-foreground max-w-2xl mx-auto" data-ps="src/pages/reviews.astro:nx7ziq">
+        Craftsmanship speaks for itself. Read why your neighbors trust us with their most valuable asset.
+      </p>
+    </Container>
+  </section>
+
+  <section class="py-24 bg-background" data-ps="src/pages/reviews.astro:ael1lb">
+    <Container>
+      <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8" data-ps="src/pages/reviews.astro:6ww49y">
+        {reviews.map((rev, __psIdx) => (
+          <div class="break-inside-avoid bg-surface border border-border p-8 reveal" data-ps={`src/pages/reviews.astro:6ww49x-${__psIdx}`}>
+            <div class="flex gap-1 text-primary mb-6" data-ps={`src/pages/reviews.astro:6ww49w-${__psIdx}`}>
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              ))}
+            </div>
+            <p class="italic text-lg mb-8 leading-relaxed" data-ps={`src/pages/reviews.astro:nx7zip-${__psIdx}`}>
+              “{rev.text}”
+            </p>
+            <div class="flex justify-between items-end border-t border-border pt-6" data-ps={`src/pages/reviews.astro:6ww49v-${__psIdx}`}>
+               <div data-ps={`src/pages/reviews.astro:6ww49u-${__psIdx}`}>
+                  <span class="block font-bold" data-ps={`src/pages/reviews.astro:z5g4n9-${__psIdx}`}>{rev.name}</span>
+                  <span class="text-xs text-muted-foreground uppercase tracking-widest" data-ps={`src/pages/reviews.astro:z5g4na-${__psIdx}`}>{rev.location}</span>
+               </div>
+               <span class="text-[10px] font-bold uppercase tracking-widest text-muted-foreground bg-background px-2 py-1 border border-border" data-ps={`src/pages/reviews.astro:z5g4nb-${__psIdx}`}>{rev.source} Review</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="mt-20 p-12 bg-primary text-white text-center" data-ps="src/pages/reviews.astro:6ww49t">
+         <h2 class="text-2xl font-bold mb-4 uppercase tracking-wider" data-ps="src/pages/reviews.astro:dpvlby">Ready to share your experience?</h2>
+         <p class="text-lg mb-8 opacity-90" data-ps="src/pages/reviews.astro:nx7zio">We value every piece of feedback from our West Michigan clients.</p>
+         <a href="https://google.com" target="_blank" class="inline-block bg-slate-950 text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-slate-900 transition-all" data-ps="src/pages/reviews.astro:gta2t1">Review Us on Google</a>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

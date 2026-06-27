@@ -1,0 +1,78 @@
+---
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+---
+
+<section class="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-background overflow-hidden" data-ps="src/components/home/Hero.astro:h1">
+  <Container class="relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center" data-ps="src/components/home/Hero.astro:h5">
+      
+      <!-- Text Content -->
+      <div class="max-w-xl mx-auto lg:mx-0 text-center lg:text-left" data-ps="src/components/home/Hero.astro:txt1">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-semibold tracking-wide mb-6 reveal" data-ps="src/components/home/Hero.astro:h6">
+          <span class="w-2 h-2 bg-primary rounded-full animate-pulse" data-ps="src/components/home/Hero.astro:h7"></span>
+          West Michigan's Trusted Experts
+        </div>
+        
+        <h1 class="text-h1 font-extrabold mb-6 leading-tight text-foreground reveal reveal-delay-1" data-ps="src/components/home/Hero.astro:h8">
+          Reliable, trustworthy, and affordable <span class="text-primary" data-ps="src/components/home/Hero.astro:h9">services.</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed reveal reveal-delay-2" data-ps="src/components/home/Hero.astro:h11">
+          Whether you have a small repair or a large-scale project, our team is here to provide top-notch service and results on every project we tackle.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start reveal reveal-delay-3" data-ps="src/components/home/Hero.astro:h12">
+          <a href="/contact" class="px-8 py-4 bg-primary hover:bg-primary-hover text-white font-bold text-base transition-all rounded-xl shadow-lg hover:shadow-xl" data-ps="src/components/home/Hero.astro:h13">
+            Get an Estimate
+          </a>
+          <a href="#services-grid" class="px-8 py-4 bg-secondary hover:bg-secondary-hover text-secondary-foreground font-bold text-base transition-all rounded-xl" data-ps="src/components/home/Hero.astro:h14">
+            Our Services
+          </a>
+        </div>
+      </div>
+
+      <!-- Image Content -->
+      <div class="relative reveal reveal-delay-4" data-ps="src/components/home/Hero.astro:img1">
+        <div class="absolute inset-0 bg-primary/10 rounded-[2rem] transform translate-x-4 translate-y-4 -z-10" data-ps="src/components/home/Hero.astro:img2"></div>
+        <img 
+          src="https://images.pexels.com/photos/176342/pexels-photo-176342.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Modern home roof" 
+          class="w-full h-auto object-cover rounded-[2rem] shadow-2xl"
+          data-ps="src/components/home/Hero.astro:h3"
+        />
+        
+        <!-- Floating Badge -->
+        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce-slow" data-ps="src/components/home/Hero.astro:badge1">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary" data-ps="src/components/home/Hero.astro:badge2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div data-ps="src/components/home/Hero.astro:badge3">
+            <p class="font-bold text-foreground" data-ps="src/components/home/Hero.astro:badge4">Top-Notch</p>
+            <p class="text-sm text-muted-foreground" data-ps="src/components/home/Hero.astro:badge5">Craftsmanship</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </Container>
+</section>
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .reveal-delay-1 { animation-delay: 0.1s; }
+  .reveal-delay-2 { animation-delay: 0.2s; }
+  .reveal-delay-3 { animation-delay: 0.3s; }
+  .reveal-delay-4 { animation-delay: 0.4s; }
+
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
